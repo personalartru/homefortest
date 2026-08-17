@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amway Home — Дом, не просто место для жизни</title>
+  <meta name="description" content="Amway Home: экологичные средства для дома, системы очистки воды и воздуха, посуда и техника для кухни.">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/home-v2.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__topbar">
+      <div class="container header__topbar-inner">
+        <button class="header__mobile-toggle" type="button" data-mobile-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню">
+          <span></span>
+        </button>
+        <a class="header__logo" href="home.html" aria-label="Amway — на главную">
+          <img src="assets/icons/amway-logo-white.svg" alt="Amway" width="125" height="43">
+        </a>
+        <form class="header__search" data-search-form role="search">
+          <label class="visually-hidden" for="header-search">Поиск по каталогу</label>
+          <input class="header__search-input" id="header-search" type="search" name="q" placeholder="Double Energy">
+          <button class="header__search-btn" type="submit" aria-label="Найти">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="8.5" cy="8.5" r="6" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M13 13L18 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </form>
+        <div class="header__actions">
+          <div class="header__lang-wrap">
+            <button class="header__action header__action--lang" type="button" data-dropdown-toggle aria-controls="lang-menu" aria-expanded="false">
+              RUS
+              <svg class="icon-chevron" width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true">
+                <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </button>
+            <div class="header__dropdown header__dropdown--lang" id="lang-menu">
+              <button class="header__dropdown-link" type="button">Русский</button>
+              <button class="header__dropdown-link" type="button">Қазақша</button>
+            </div>
+          </div>
+          <span class="header__divider" aria-hidden="true"></span>
+          <a class="header__action header__action--login" href="#">Войти</a>
+          <a class="header__action header__action--register" href="#">Регистрация</a>
+          <span class="header__divider" aria-hidden="true"></span>
+          <a class="header__action header__action--location" href="#">
+            <svg width="20" height="24" viewBox="0 0 20 24" fill="none" aria-hidden="true">
+              <path d="M10 1C5.6 1 2 4.6 2 9c0 5.6 8 13.5 8 13.5S18 14.6 18 9c0-4.4-3.6-8-8-8Z" stroke="currentColor" stroke-width="1.7"/>
+              <circle cx="10" cy="9" r="3" stroke="currentColor" stroke-width="1.7"/>
+            </svg>
+            <span>г. Астана, Казахстан</span>
+          </a>
+          <span class="header__divider" aria-hidden="true"></span>
+          <a class="header__action header__action--cart" href="#" aria-label="Корзина">
+            <svg width="26" height="24" viewBox="0 0 26 24" fill="none" aria-hidden="true">
+              <path d="M1 1h3.5l3 13.5h12L23 5H6" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              <circle cx="9" cy="20.5" r="2" stroke="currentColor" stroke-width="1.7"/>
+              <circle cx="18" cy="20.5" r="2" stroke="currentColor" stroke-width="1.7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="header__nav" aria-label="Основное меню">
+      <div class="container">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#solutions">
+              <span class="header__burger-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+              Каталог
+            </a>
+          </li>
+          <li class="header__nav-item"><a class="header__nav-link" href="#">Акции</a></li>
+          <li class="header__nav-item">
+            <button class="header__nav-link" type="button" data-dropdown-toggle aria-controls="brands-menu" aria-expanded="false">
+              Наши бренды
+            </button>
+            <div class="header__dropdown" id="brands-menu">
+              <a class="header__dropdown-link" href="home.html" aria-current="page">Amway Home™</a>
+              <a class="header__dropdown-link" href="artistry.html">Artistry™</a>
+              <a class="header__dropdown-link" href="personal-care.html">Personal Care</a>
+              <a class="header__dropdown-link" href="nutrilite.html">Nutrilite™</a>
+            </div>
+          </li>
+          <li class="header__nav-item"><a class="header__nav-link" href="#">Программы и решения</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="#">О компании</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="#">Новости Amway</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="#">Начать бизнес</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="false">
+    <div class="mobile-menu__backdrop"></div>
+    <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Меню">
+      <div class="mobile-menu__head">
+        <img src="assets/icons/amway-logo-white.svg" alt="Amway" width="96" height="33">
+        <button class="mobile-menu__close" type="button" data-menu-close aria-label="Закрыть меню">&times;</button>
+      </div>
+      <nav aria-label="Мобильное меню">
+        <ul class="mobile-menu__list">
+          <li><a class="mobile-menu__link" href="#solutions" data-menu-close>Каталог</a></li>
+          <li><a class="mobile-menu__link" href="#">Акции</a></li>
+          <li><a class="mobile-menu__link" href="#">Программы и решения</a></li>
+          <li><a class="mobile-menu__link" href="#">О компании</a></li>
+          <li><a class="mobile-menu__link" href="#">Новости Amway</a></li>
+          <li><a class="mobile-menu__link" href="#">Начать бизнес</a></li>
+        </ul>
+        <div class="mobile-menu__sub">
+          <p class="mobile-menu__sub-title">Наши бренды</p>
+          <a class="mobile-menu__sub-link" href="home.html" aria-current="page">Amway Home™</a>
+          <a class="mobile-menu__sub-link" href="artistry.html">Artistry™</a>
+          <a class="mobile-menu__sub-link" href="personal-care.html">Personal Care</a>
+          <a class="mobile-menu__sub-link" href="nutrilite.html">Nutrilite™</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <section class="subtip" aria-label="Возможности бизнеса">
+      <div class="container subtip__inner">
+        <p class="subtip__text">Откройте для себя возможности бизнеса с Amway и&nbsp;выберите удобный формат старта</p>
+        <a class="link-arrow" href="#">
+          Начать бизнес
+          <svg class="icon-diagonal" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+            <path d="M6.889 16.374L15.374 7.888M15.775 15.266L15.374 7.888L7.997 7.488" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <div class="hero-wrap" data-slider>
+      <section class="hero" aria-roledescription="карусель" aria-label="Главные предложения Amway Home">
+        <div class="hero__slide is-active" data-slide>
+          <img class="hero__slide-img" src="assets/images/home/hero-1.jpg" alt="Мама с дочкой отдыхают на кровати" width="2200" height="1466" fetchpriority="high">
+        </div>
+        <div class="hero__slide" data-slide>
+          <img class="hero__slide-img" src="assets/images/home/hero-2.jpg" alt="Мама с дочкой в жёлтом пледе на прогулке" width="2200" height="1209" loading="lazy">
+        </div>
+        <div class="hero__slide" data-slide>
+          <img class="hero__slide-img" src="assets/images/home/hero-3.jpg" alt="Смеющийся ребёнок в гамаке" width="1280" height="550" loading="lazy">
+        </div>
+        <div class="container hero__content">
+          <img class="hero__brand" src="assets/icons/amway-home-logo.svg" alt="Amway Home Care" width="132" height="57">
+          <h1 class="hero__title">Дом&nbsp;— не&nbsp;просто место для жизни. <br class="hero__br">Это пространство для комфорта и&nbsp;гармонии</h1>
+          <p class="hero__subtitle">Экологичные решения, которые заботятся о&nbsp;здоровье вашей семьи каждый день</p>
+          <a class="btn hero__cta" href="#survey">Подобрать средство</a>
+        </div>
+        <div class="container hero__controls">
+          <div class="slider-dots hero__dots">
+            <button class="slider-dots__dot is-active" type="button" data-slider-dot aria-label="Слайд 1"></button>
+            <button class="slider-dots__dot" type="button" data-slider-dot aria-label="Слайд 2"></button>
+            <button class="slider-dots__dot" type="button" data-slider-dot aria-label="Слайд 3"></button>
+          </div>
+          <div class="hero__arrows">
+            <button class="slider-btn slider-btn--light slider-btn--prev" type="button" data-slider-prev aria-label="Предыдущий слайд">
+              <svg class="icon-arrow" width="14" height="13" viewBox="0 0 13.58 12.12" fill="none" aria-hidden="true">
+                <path d="M0 6.06h12.45M7.33 11.56l5.12-5.5-5.12-5.5" stroke="currentColor" stroke-width="1.65"/>
+              </svg>
+            </button>
+            <button class="slider-btn slider-btn--light" type="button" data-slider-next aria-label="Следующий слайд">
+              <svg class="icon-arrow" width="14" height="13" viewBox="0 0 13.58 12.12" fill="none" aria-hidden="true">
+                <path d="M0 6.06h12.45M7.33 11.56l5.12-5.5-5.12-5.5" stroke="currentColor" stroke-width="1.65"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="section" aria-label="Преимущества Amway Home">
+      <div class="container">
+        <div class="feature-cards">
+          <article class="feature-card feature-card--green">
+            <h2 class="feature-card__title">Чистота с&nbsp;заботой о&nbsp;самом важном</h2>
+            <p class="feature-card__text">Средства для дома с&nbsp;историей, которые объединяют эффективность, безопасность и&nbsp;экологичность.</p>
+            <a class="card-arrow" href="#solutions" aria-label="Подробнее: чистота с заботой о самом важном">
+              <svg class="icon-diagonal" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+                <path d="M6.889 16.374L15.374 7.888M15.775 15.266L15.374 7.888L7.997 7.488" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </a>
+          </article>
+          <article class="feature-card feature-card--mist">
+            <h2 class="feature-card__title">Здоровый дом и&nbsp;всё, что в&nbsp;нем</h2>
+            <p class="feature-card__text">Здоровый дом, и&nbsp;всё, что в&nbsp;нем. Узнайте больше об&nbsp;инновационных системах очистки воды и&nbsp;воздуха.</p>
+            <a class="card-arrow" href="#hotspot" aria-label="Подробнее: здоровый дом и всё, что в нем">
+              <svg class="icon-diagonal" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+                <path d="M6.889 16.374L15.374 7.888M15.775 15.266L15.374 7.888L7.997 7.488" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </a>
+          </article>
+          <article class="feature-card feature-card--gray">
+            <h2 class="feature-card__title">Готовьте с&nbsp;любовью</h2>
+            <p class="feature-card__text">Кухонная посуда, техника и&nbsp;аксессуары Amway Home™&nbsp;— экологично и&nbsp;функционально&nbsp;— для вас и&nbsp;вашей семьи.</p>
+            <a class="card-arrow" href="#solutions" aria-label="Подробнее: готовьте с любовью">
+              <svg class="icon-diagonal" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+                <path d="M6.889 16.374L15.374 7.888M15.775 15.266L15.374 7.888L7.997 7.488" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="История бренда L.O.C. Amway">
+      <div class="container">
+        <div class="story" data-slider>
+          <div class="story__slides">
+            <article class="story__slide is-active" data-slide>
+              <div class="story__media">
+                <img src="assets/images/home/story-founders.jpg" alt="Основатели Amway — Рич ДеВос и Джей Ван Андел" width="1000" height="1182" loading="lazy">
+              </div>
+              <div class="story__body">
+                <h2 class="story__title">История бренда L.O.C.™&nbsp;Amway</h2>
+                <h3 class="story__subtitle">Первый продукт Amway</h3>
+                <p class="story__text">LOC™, изначально известный как Frisk Liquid Organic Cleaner, стал первым продуктом Amway и&nbsp;одним из&nbsp;первых в&nbsp;мире биоразлагаемых универсальных чистящих средств.</p>
+              </div>
+            </article>
+            <article class="story__slide" data-slide>
+              <div class="story__media">
+                <img src="assets/images/home/story-2.jpg" alt="Рич ДеВос и Джей Ван Андел в Гранд-Рапидс" width="1000" height="1182" loading="lazy">
+              </div>
+              <div class="story__body">
+                <h2 class="story__title">История бренда L.O.C.™&nbsp;Amway</h2>
+                <h3 class="story__subtitle">Amway в&nbsp;Гранд-Рапидс</h3>
+                <p class="story__text">В&nbsp;1959 году Рич ДеВос и&nbsp;Джей Ван Андел основали Amway в&nbsp;Гранд-Рапидс, штат Мичиган. Именно с&nbsp;LOC начался путь компании: концентрированное средство для&nbsp;уборки на&nbsp;основе более экологичного подхода стало символом качества, инноваций и&nbsp;заботы о&nbsp;доме.</p>
+              </div>
+            </article>
+            <article class="story__slide" data-slide>
+              <div class="story__media">
+                <img src="assets/images/home/hero-1.jpg" alt="Семья заботится о чистоте дома" width="1000" height="1182" loading="lazy">
+              </div>
+              <div class="story__body">
+                <h2 class="story__title">История бренда L.O.C.™&nbsp;Amway</h2>
+                <h3 class="story__subtitle">Новый подход к&nbsp;чистоте</h3>
+                <p class="story__text">LOC™ выделялся среди привычных средств: он был концентрированным, универсальным и&nbsp;при этом более безопасным для окружающей среды. Это помогло Amway задать собственный стандарт в&nbsp;категории товаров для дома.</p>
+              </div>
+            </article>
+            <article class="story__slide" data-slide>
+              <div class="story__media">
+                <img src="assets/images/home/hero-2.jpg" alt="Продукты Amway рекомендуют близким" width="1000" height="1182" loading="lazy">
+              </div>
+              <div class="story__body">
+                <h2 class="story__title">История бренда L.O.C.™&nbsp;Amway</h2>
+                <h3 class="story__subtitle">Основа бизнес-модели</h3>
+                <p class="story__text">Успех LOC™ стал отправной точкой для развития прямых продаж Amway. Продукт распространяли независимые предприниматели через личные рекомендации, что помогло компании быстро расти и&nbsp;выстраивать доверительные отношения с&nbsp;покупателями.</p>
+              </div>
+            </article>
+            <article class="story__slide" data-slide>
+              <div class="story__media">
+                <img src="assets/images/home/hero-3.jpg" alt="Amway выходит на глобальный рынок" width="1000" height="1182" loading="lazy">
+              </div>
+              <div class="story__body">
+                <h2 class="story__title">История бренда L.O.C.™&nbsp;Amway</h2>
+                <h3 class="story__subtitle">Шаг к&nbsp;глобальному развитию</h3>
+                <p class="story__text">Популярность LOC™ дала Amway устойчивую основу для расширения. Уже в&nbsp;первые годы компания вышла за&nbsp;пределы США, а&nbsp;затем начала развивать новые направления&nbsp;— от&nbsp;товаров для красоты до&nbsp;нутрицевтики.</p>
+              </div>
+            </article>
+            <article class="story__slide" data-slide>
+              <div class="story__media">
+                <img src="assets/images/home/hero-4.jpg" alt="LOC™ — часть наследия Amway" width="1000" height="1182" loading="lazy">
+              </div>
+              <div class="story__body">
+                <h2 class="story__title">История бренда L.O.C.™&nbsp;Amway</h2>
+                <h3 class="story__subtitle">Наследие LOC™</h3>
+                <p class="story__text">LOC™ стал не&nbsp;просто чистящим средством, а&nbsp;важной частью ДНК Amway. Он воплотил ранние ценности бренда: инновационность, ответственность, качество и&nbsp;стремление создавать продукты, которые помогают людям заботиться о&nbsp;доме и&nbsp;окружающем мире.</p>
+              </div>
+            </article>
+            <article class="story__slide" data-slide>
+              <div class="story__media">
+                <img src="assets/images/home/video-thumb-1.jpg" alt="Новые решения Amway для дома" width="1000" height="1182" loading="lazy">
+              </div>
+              <div class="story__body">
+                <h2 class="story__title">История бренда L.O.C.™&nbsp;Amway</h2>
+                <h3 class="story__subtitle">Продолжение следует</h3>
+                <p class="story__text">Компания Amway, задавая тренды на&nbsp;рынке, стремится приятно удивлять партнеров и&nbsp;клиентов&nbsp;— ожидайте инновационные и&nbsp;актуальные решения для Вашего дома.</p>
+              </div>
+            </article>
+          </div>
+          <div class="story__nav">
+            <button class="slider-btn slider-btn--prev" type="button" data-slider-prev aria-label="Предыдущий слайд">
+              <svg class="icon-arrow" width="14" height="13" viewBox="0 0 13.58 12.12" fill="none" aria-hidden="true">
+                <path d="M0 6.06h12.45M7.33 11.56l5.12-5.5-5.12-5.5" stroke="currentColor" stroke-width="1.65"/>
+              </svg>
+            </button>
+            <button class="slider-btn" type="button" data-slider-next aria-label="Следующий слайд">
+              <svg class="icon-arrow" width="14" height="13" viewBox="0 0 13.58 12.12" fill="none" aria-hidden="true">
+                <path d="M0 6.06h12.45M7.33 11.56l5.12-5.5-5.12-5.5" stroke="currentColor" stroke-width="1.65"/>
+              </svg>
+            </button>
+          </div>
+          <div class="slider-dots story__dots">
+            <button class="slider-dots__dot is-active" type="button" data-slider-dot aria-label="Слайд 1"></button>
+            <button class="slider-dots__dot" type="button" data-slider-dot aria-label="Слайд 2"></button>
+            <button class="slider-dots__dot" type="button" data-slider-dot aria-label="Слайд 3"></button>
+            <button class="slider-dots__dot" type="button" data-slider-dot aria-label="Слайд 4"></button>
+            <button class="slider-dots__dot" type="button" data-slider-dot aria-label="Слайд 5"></button>
+            <button class="slider-dots__dot" type="button" data-slider-dot aria-label="Слайд 6"></button>
+            <button class="slider-dots__dot" type="button" data-slider-dot aria-label="Слайд 7"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="hotspot" aria-label="Здоровый дом и всё, что в нём">
+      <div class="container">
+        <div class="hotspot">
+          <div class="hotspot__media">
+            <img src="assets/images/home/hotspot.jpg" alt="Семья готовит на кухне рядом с системой очистки воздуха Atmosphere" width="2200" height="1228" loading="lazy">
+            <button class="hotspot__point hotspot__point--tip-left" style="left: 95.2%; top: 41.5%;" type="button" aria-expanded="false" aria-label="Точка интереса: средства для стирки и чистящие средства">
+              <span class="hotspot__tooltip">Средства для стирки, моющие и&nbsp;чистящие средства Amway Home™</span>
+            </button>
+            <button class="hotspot__point hotspot__point--tip-left" style="left: 82.8%; top: 34.7%;" type="button" aria-expanded="false" aria-label="Точка интереса: система очистки воды">
+              <span class="hotspot__tooltip">Система очистки воды eSpring™</span>
+            </button>
+            <button class="hotspot__point hotspot__point--tip-right" style="left: 15.9%; top: 79%;" type="button" aria-expanded="false" aria-label="Точка интереса: кухонная посуда">
+              <span class="hotspot__tooltip">Кухонная посуда Amway Cookware™</span>
+            </button>
+            <button class="hotspot__point hotspot__point--tip-left" style="left: 81.8%; top: 89.9%;" type="button" aria-expanded="false" aria-label="Точка интереса: система очистки воздуха">
+              <span class="hotspot__tooltip">Система очистки воздуха Atmosphere Mini™</span>
+            </button>
+          </div>
+          <div class="hotspot__caption">
+            <h2 class="hotspot__title">Здоровый дом и&nbsp;всё, что в&nbsp;нём</h2>
+            <p class="hotspot__text">Здоровый дом&nbsp;— это чистота, безопасность и&nbsp;комфорт каждый день. Продукция Amway помогает вам поддерживать качество воздуха и&nbsp;воды, готовить с&nbsp;любовью и&nbsp;пользой, сохранять чистоту и&nbsp;создавать пространство, в&nbsp;котором хочется жить.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section principles" aria-label="Принципы безопасного дома">
+      <div class="container">
+        <h2 class="section__title section__title--center principles__title">Принципы безопасного дома от&nbsp;Amway</h2>
+        <p class="principles__lead">Amway Healthy Home™ соединяет исследовательский подход и&nbsp;практичность: формулы должны не&nbsp;просто звучать безопасно, а&nbsp;работать в&nbsp;реальных домашних сценариях.</p>
+        <div class="principles__grid">
+          <article class="principle-card principle-card--green">
+            <span class="principle-card__badge">
+              <img src="assets/icons/principle-nature.png" alt="" width="53" height="54" loading="lazy">
+            </span>
+            <h3 class="principle-card__title">Гармония с&nbsp;природой</h3>
+            <p class="principle-card__text">Чистота в&nbsp;доме&nbsp;— без вреда для окружающей среды. Наши средства биоразлагаемы, не&nbsp;накапливаются в&nbsp;воде и&nbsp;почве и&nbsp;экологически безопасны.</p>
+            <a class="card-arrow" href="#solutions" aria-label="Подробнее: гармония с природой">
+              <svg class="icon-diagonal" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+                <path d="M6.889 16.374L15.374 7.888M15.775 15.266L15.374 7.888L7.997 7.488" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </a>
+          </article>
+          <article class="principle-card principle-card--orange">
+            <span class="principle-card__badge">
+              <img src="assets/icons/principle-safety.png" alt="" width="53" height="54" loading="lazy">
+            </span>
+            <h3 class="principle-card__title">Безопасность</h3>
+            <p class="principle-card__text">Все средства прошли дерматологические тестирования и&nbsp;подтвердили свою гипоаллергенность. Это особенно важно, когда в&nbsp;доме есть дети.</p>
+            <a class="card-arrow" href="#solutions" aria-label="Подробнее: безопасность">
+              <svg class="icon-diagonal" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+                <path d="M6.889 16.374L15.374 7.888M15.775 15.266L15.374 7.888L7.997 7.488" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </a>
+          </article>
+          <article class="principle-card principle-card--red">
+            <span class="principle-card__badge">
+              <img src="assets/icons/principle-economy.png" alt="" width="53" height="54" loading="lazy">
+            </span>
+            <h3 class="principle-card__title">Экономичность</h3>
+            <p class="principle-card__text">Продуманные формулы обеспечивают бережный расход, делая повседневную заботу о&nbsp;доме разумной и&nbsp;доступной.</p>
+            <a class="card-arrow" href="#solutions" aria-label="Подробнее: экономичность">
+              <svg class="icon-diagonal" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+                <path d="M6.889 16.374L15.374 7.888M15.775 15.266L15.374 7.888L7.997 7.488" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Здоровый дом с Amway: видео">
+      <div class="container">
+        <h2 class="section__title section__title--center video-section__title">Здоровый дом с&nbsp;Amway: чистота, вода и&nbsp;воздух</h2>
+        <div data-video-gallery>
+          <div class="video-banner">
+            <img class="video-banner__cover" data-video-cover src="assets/images/home/video-cover.jpg" alt="Семья в гостиной — кадр из видео о здоровом доме" width="2200" height="1237" loading="lazy">
+            <div class="video-banner__bar">
+              <button class="video-banner__play" type="button" data-modal-open="assets/images/home/video-cover.jpg">
+                <span class="video-banner__play-circle">
+                  <svg width="24" height="27" viewBox="0 0 24 27" fill="currentColor" aria-hidden="true">
+                    <path d="M0.5 2.2C0.5 1.4 1.35 0.9 2 1.3L22.9 13.7C23.6 14.1 23.6 15 22.9 15.4L2 27.8C1.35 28.2 0.5 27.7 0.5 26.9V2.2Z" transform="scale(1 0.93)"/>
+                  </svg>
+                </span>
+                Смотреть видео
+              </button>
+            </div>
+          </div>
+          <div class="video-thumbs">
+            <button class="video-thumb is-active" type="button" data-video-thumb="assets/images/home/video-cover.jpg" aria-label="Видео 1: здоровый дом с Amway">
+              <img src="assets/images/home/video-thumb-1.jpg" alt="" width="520" height="292" loading="lazy">
+              <span class="video-thumb__play" aria-hidden="true">
+                <svg width="14" height="16" viewBox="0 0 24 27" fill="currentColor"><path d="M0.5 2.2C0.5 1.4 1.35 0.9 2 1.3L22.9 13.7C23.6 14.1 23.6 15 22.9 15.4L2 27.8C1.35 28.2 0.5 27.7 0.5 26.9V2.2Z" transform="scale(1 0.93)"/></svg>
+              </span>
+            </button>
+            <button class="video-thumb" type="button" data-video-thumb="assets/images/home/video-thumb-2.png" aria-label="Видео 2: чистящее средство для кухни">
+              <img src="assets/images/home/video-thumb-2.png" alt="" width="368" height="207" loading="lazy">
+              <span class="video-thumb__play" aria-hidden="true">
+                <svg width="14" height="16" viewBox="0 0 24 27" fill="currentColor"><path d="M0.5 2.2C0.5 1.4 1.35 0.9 2 1.3L22.9 13.7C23.6 14.1 23.6 15 22.9 15.4L2 27.8C1.35 28.2 0.5 27.7 0.5 26.9V2.2Z" transform="scale(1 0.93)"/></svg>
+              </span>
+            </button>
+            <button class="video-thumb" type="button" data-video-thumb="assets/images/home/video-thumb-3.png" aria-label="Видео 3: средство от сложных пятен">
+              <img src="assets/images/home/video-thumb-3.png" alt="" width="432" height="244" loading="lazy">
+              <span class="video-thumb__play" aria-hidden="true">
+                <svg width="14" height="16" viewBox="0 0 24 27" fill="currentColor"><path d="M0.5 2.2C0.5 1.4 1.35 0.9 2 1.3L22.9 13.7C23.6 14.1 23.6 15 22.9 15.4L2 27.8C1.35 28.2 0.5 27.7 0.5 26.9V2.2Z" transform="scale(1 0.93)"/></svg>
+              </span>
+            </button>
+            <button class="video-thumb" type="button" data-video-thumb="assets/images/home/video-thumb-4.png" aria-label="Видео 4: уборка с Amway Home">
+              <img src="assets/images/home/video-thumb-4.png" alt="" width="400" height="225" loading="lazy">
+              <span class="video-thumb__play" aria-hidden="true">
+                <svg width="14" height="16" viewBox="0 0 24 27" fill="currentColor"><path d="M0.5 2.2C0.5 1.4 1.35 0.9 2 1.3L22.9 13.7C23.6 14.1 23.6 15 22.9 15.4L2 27.8C1.35 28.2 0.5 27.7 0.5 26.9V2.2Z" transform="scale(1 0.93)"/></svg>
+              </span>
+            </button>
+            <button class="video-thumb" type="button" data-video-thumb="assets/images/home/video-thumb-5.png" aria-label="Видео 5: советы по уходу за домом">
+              <img src="assets/images/home/video-thumb-5.png" alt="" width="432" height="244" loading="lazy">
+              <span class="video-thumb__play" aria-hidden="true">
+                <svg width="14" height="16" viewBox="0 0 24 27" fill="currentColor"><path d="M0.5 2.2C0.5 1.4 1.35 0.9 2 1.3L22.9 13.7C23.6 14.1 23.6 15 22.9 15.4L2 27.8C1.35 28.2 0.5 27.7 0.5 26.9V2.2Z" transform="scale(1 0.93)"/></svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="solutions" aria-label="Решения для каждого пространства дома">
+      <div class="container">
+        <h2 class="section__title solutions__title">Решения для каждого пространства дома</h2>
+        <div class="category-grid">
+          <a class="category-card" href="#">
+            <img class="category-card__img" src="assets/images/home/cat-espring.jpg" alt="Система очистки воды eSpring на кухонной столешнице" width="900" height="1092" loading="lazy">
+            <h3 class="category-card__title">Система очистки воды eSpring™</h3>
+          </a>
+          <a class="category-card" href="#">
+            <img class="category-card__img" src="assets/images/home/cat-atmosphere.jpg" alt="Система очистки воздуха Atmosphere Mini в спальне" width="900" height="1118" loading="lazy">
+            <h3 class="category-card__title">Система очистки воздуха Atmosphere Mini™</h3>
+          </a>
+          <a class="category-card" href="#">
+            <img class="category-card__img" src="assets/images/home/cat-cookware.jpg" alt="Сковорода iCook на варочной панели" width="900" height="675" loading="lazy">
+            <h3 class="category-card__title">Посуда и&nbsp;техника для кухни Amway</h3>
+          </a>
+          <a class="category-card" href="#">
+            <img class="category-card__img" src="assets/images/home/cat-laundry.jpg" alt="Средства для стирки Amway Home SA8 на стиральной машине" width="900" height="675" loading="lazy">
+            <h3 class="category-card__title">Средства для стирки</h3>
+          </a>
+          <a class="category-card" href="#">
+            <img class="category-card__img" src="assets/images/home/cat-cleaning.jpg" alt="Чистящие средства Amway Home L.O.C. на кухне" width="900" height="900" loading="lazy">
+            <h3 class="category-card__title">Моющие и&nbsp;чистящие средства</h3>
+          </a>
+          <a class="category-card" href="#">
+            <img class="category-card__img" src="assets/images/home/cat-accessories.jpg" alt="Распылитель и аксессуары Amway Home в ванной" width="900" height="1118" loading="lazy">
+            <h3 class="category-card__title">Аксессуары</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="survey" aria-label="Подбор решения">
+      <div class="container survey">
+        <div class="survey__tiles">
+          <article class="promo-tile promo-tile--green">
+            <h3 class="promo-tile__title">Для чистоты в&nbsp;доме</h3>
+            <img class="promo-tile__img promo-tile__img--square" src="assets/images/home/promo-dishdrops-box.png" alt="Таблетки для посудомоечных машин Dish Drops" width="540" height="540" loading="lazy">
+            <img class="promo-tile__img promo-tile__img--tall" src="assets/images/home/promo-loc-bottle.png" alt="Универсальное чистящее средство L.O.C." width="540" height="540" loading="lazy">
+          </article>
+          <article class="promo-tile promo-tile--cyan">
+            <h3 class="promo-tile__title">Стираем экологично и&nbsp;эффективно</h3>
+            <img class="promo-tile__img promo-tile__img--square" src="assets/images/home/promo-sa8-box.png" alt="Стиральный порошок SA8 Premium" width="540" height="540" loading="lazy">
+            <img class="promo-tile__img promo-tile__img--tall" src="assets/images/home/promo-sa8-bottle.png" alt="Гель для стирки SA8 Color" width="540" height="540" loading="lazy">
+          </article>
+          <article class="promo-tile promo-tile--orange">
+            <h3 class="promo-tile__title">Готовим с&nbsp;любовью</h3>
+            <img class="promo-tile__img promo-tile__img--wide" src="assets/images/home/promo-pan.png" alt="Сковорода iCook" width="700" height="524" loading="lazy">
+          </article>
+          <article class="promo-tile promo-tile--red">
+            <h3 class="promo-tile__title">С&nbsp;заботой о&nbsp;детях</h3>
+            <img class="promo-tile__img promo-tile__img--square promo-tile__img--jug" src="assets/images/home/promo-baby-jug.png" alt="Жидкое средство для стирки детского белья SA8 Baby" width="540" height="540" loading="lazy">
+            <img class="promo-tile__img promo-tile__img--tall" src="assets/images/home/promo-dish-bottle.png" alt="Средство для мытья детской посуды" width="540" height="540" loading="lazy">
+          </article>
+        </div>
+        <form class="survey__card" action="#" method="get">
+          <h2 class="survey__title">Что вам нужно сегодня?</h2>
+          <ul class="survey__list">
+            <li class="survey__item">
+              <label class="survey__label">
+                <input class="survey__checkbox" type="checkbox" name="need" value="dishes" checked>
+                <span class="survey__box" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M5 9.5L9.5 14L15.5 6" stroke="#fff" stroke-width="2"/></svg>
+                </span>
+                Вымыть посуду
+              </label>
+            </li>
+            <li class="survey__item">
+              <label class="survey__label">
+                <input class="survey__checkbox" type="checkbox" name="need" value="surfaces" checked>
+                <span class="survey__box" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M5 9.5L9.5 14L15.5 6" stroke="#fff" stroke-width="2"/></svg>
+                </span>
+                Ежедневная уборка поверхностей
+              </label>
+            </li>
+            <li class="survey__item">
+              <label class="survey__label">
+                <input class="survey__checkbox" type="checkbox" name="need" value="bathroom">
+                <span class="survey__box" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M5 9.5L9.5 14L15.5 6" stroke="#fff" stroke-width="2"/></svg>
+                </span>
+                Убрать ванную
+              </label>
+            </li>
+            <li class="survey__item">
+              <label class="survey__label">
+                <input class="survey__checkbox" type="checkbox" name="need" value="baby-laundry">
+                <span class="survey__box" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M5 9.5L9.5 14L15.5 6" stroke="#fff" stroke-width="2"/></svg>
+                </span>
+                Постирать детские вещи
+              </label>
+            </li>
+            <li class="survey__item">
+              <label class="survey__label">
+                <input class="survey__checkbox" type="checkbox" name="need" value="stains">
+                <span class="survey__box" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M5 9.5L9.5 14L15.5 6" stroke="#fff" stroke-width="2"/></svg>
+                </span>
+                Вывести пятна
+              </label>
+            </li>
+            <li class="survey__item">
+              <label class="survey__label">
+                <input class="survey__checkbox" type="checkbox" name="need" value="accessories">
+                <span class="survey__box" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M5 9.5L9.5 14L15.5 6" stroke="#fff" stroke-width="2"/></svg>
+                </span>
+                Аксессуары для разведения концентратов
+              </label>
+            </li>
+          </ul>
+          <button class="btn survey__submit" type="submit">Подобрать решение</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Наши рекомендации">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Наши рекомендации</h2>
+          <a class="link-arrow link-arrow--hide-mobile" href="#solutions">
+            Перейти в каталог
+            <svg class="icon-diagonal" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+              <path d="M6.889 16.374L15.374 7.888M15.775 15.266L15.374 7.888L7.997 7.488" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+        <div class="recs">
+          <a class="rec-card" href="#solutions">
+            <img class="rec-card__img" src="assets/images/home/rec-kitchen.jpg" alt="Блендер iCook на кухне" width="1200" height="826" loading="lazy">
+            <span class="rec-card__label rec-card__label--blue">
+              Техника для кухни
+              <svg width="7" height="13" viewBox="0 0 7 13" fill="none" aria-hidden="true">
+                <path d="M1 1L6 6.5L1 12" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </span>
+          </a>
+          <a class="rec-card" href="personal-care.html">
+            <img class="rec-card__img" src="assets/images/home/rec-family.jpg" alt="Мама купает малыша" width="800" height="1196" loading="lazy">
+            <span class="rec-card__label rec-card__label--teal">
+              Уход для всей семьи
+              <svg width="7" height="13" viewBox="0 0 7 13" fill="none" aria-hidden="true">
+                <path d="M1 1L6 6.5L1 12" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+        <a class="btn recs__btn" href="#solutions">Перейти в каталог</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="container footer__top-inner">
+        <div class="footer__lang">
+          <span class="footer__top-label" id="footer-lang-label">Выберите язык</span>
+          <button class="footer__lang-btn" type="button" data-dropdown-toggle aria-controls="footer-lang-list" aria-expanded="false" aria-labelledby="footer-lang-label">
+            <span class="footer__lang-flag" aria-hidden="true"></span>
+            Русский
+            <svg class="icon-chevron" width="18" height="10" viewBox="0 0 14 8" fill="none" aria-hidden="true">
+              <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+          </button>
+          <div class="footer__lang-list" id="footer-lang-list">
+            <button class="footer__lang-option" type="button">Русский</button>
+            <button class="footer__lang-option" type="button">Қазақша</button>
+          </div>
+        </div>
+        <div>
+          <span class="footer__top-label">Связаться с нами</span>
+          <div class="footer__socials">
+            <a class="footer__social" href="#" aria-label="Amway в Facebook"><img src="assets/icons/social-fb.png" alt="" width="32" height="32" loading="lazy"></a>
+            <a class="footer__social" href="#" aria-label="Amway во ВКонтакте"><img src="assets/icons/social-vk.png" alt="" width="32" height="32" loading="lazy"></a>
+            <a class="footer__social" href="#" aria-label="Amway в Instagram"><img src="assets/icons/social-inst.png" alt="" width="32" height="32" loading="lazy"></a>
+            <a class="footer__social" href="#" aria-label="Amway в Одноклассниках"><img src="assets/icons/social-ok.png" alt="" width="32" height="32" loading="lazy"></a>
+            <a class="footer__social" href="#" aria-label="Amway на YouTube"><img src="assets/icons/social-yt.png" alt="" width="32" height="32" loading="lazy"></a>
+            <a class="footer__social" href="#" aria-label="Amway в Telegram"><img src="assets/icons/social-tg.png" alt="" width="32" height="32" loading="lazy"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__center">
+      <div class="container">
+        <div class="footer__columns">
+          <div>
+            <h2 class="footer__col-title">Бренды</h2>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="nutrilite.html">NUTRILITE™</a></li>
+              <li><a class="footer__link" href="artistry.html">Artistry™</a></li>
+              <li><a class="footer__link" href="home.html">Amway Home™</a></li>
+              <li><a class="footer__link" href="personal-care.html">Personal Care</a></li>
+              <li><a class="footer__link footer__link--bold" href="#">Подробнее</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer__col-title">Компания Amway</h2>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="#">Amway в России</a></li>
+              <li><a class="footer__link" href="#">Карьера в Amway</a></li>
+              <li><a class="footer__link" href="#">Начать бизнес</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer__col-title">Купить продукцию</h2>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="#solutions">Каталог продукции</a></li>
+              <li><a class="footer__link" href="#">Оплата и доставка</a></li>
+              <li><a class="footer__link" href="#">Торговые центры</a></li>
+              <li><a class="footer__link" href="#">Советы экспертов</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer__col-title">Безопасные покупки</h2>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="#">Политика конфиденциальности</a></li>
+              <li><a class="footer__link" href="#">Условия использования</a></li>
+              <li><a class="footer__link" href="#">Положение об обработке персональных данных</a></li>
+              <li><a class="footer__link" href="#">Карта сайта</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer__col-title">Digital инструменты</h2>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="#">ALL Stars</a></li>
+              <li><a class="footer__link footer__link--bold" href="#">Подробнее</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer__col-title">Нужна помощь?</h2>
+            <ul class="footer__list">
+              <li>
+                <a class="footer__link footer__link--icon" href="mailto:inforu@amway.com">
+                  <svg width="19" height="15" viewBox="0 0 19 15" fill="none" aria-hidden="true"><rect x="1" y="1" width="17" height="13" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M1.5 2l8 6.5L17.5 2" stroke="currentColor" stroke-width="1.4"/></svg>
+                  inforu@amway.com
+                </a>
+              </li>
+              <li>
+                <a class="footer__link footer__link--icon" href="tel:88001009000">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 1.5C4.8 1.5 6 3.6 6 4.4c0 .7-.9 1.3-1.3 1.9.7 1.9 2.2 3.4 4 4.1.6-.4 1.2-1.3 1.9-1.3.8 0 2.9 1.2 2.9 2 0 1.7-1.5 3.4-3.2 3.4-4.6 0-8.8-4.2-8.8-8.8C1.5 4 3.2 1.5 4 1.5Z" stroke="currentColor" stroke-width="1.4"/></svg>
+                  8-800-100-9000
+                </a>
+              </li>
+              <li><a class="footer__contacts-btn" href="#">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <img src="assets/icons/amway-logo-color.svg" alt="Amway" width="70" height="24" loading="lazy">
+        <p class="footer__copy">© 2011-2020 Amway Europe. Все права защищены.</p>
+        <a class="footer__site-link" href="http://www.amwayglobal.com" target="_blank" rel="noopener">http://www.amwayglobal.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" data-modal role="dialog" aria-modal="true" aria-label="Просмотр видео">
+    <div class="modal__backdrop"></div>
+    <div class="modal__window">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">&times;</button>
+      <img class="modal__media" data-modal-media src="assets/images/home/video-cover.jpg" alt="Кадр из видео" width="2200" height="1237">
+    </div>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

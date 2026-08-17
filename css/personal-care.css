@@ -1,0 +1,763 @@
+/* ============ Personal Care: специфичные секции ============ */
+
+/* Hero */
+.hero__title--pc {
+  margin-top: 139px;
+  max-width: 640px;
+  font-size: 52px;
+  line-height: 1;
+}
+
+.hero--pc .hero__cta {
+  margin-top: 46px;
+}
+
+/* Карточки-преимущества */
+.pc-features {
+  grid-template-columns: 386fr 358fr 357fr;
+  gap: 36px;
+}
+
+.pc-feature {
+  padding-top: 52px;
+}
+
+.pc-feature .feature-card__title {
+  font-size: 30px;
+  line-height: 1;
+  max-width: 300px;
+}
+
+.pc-feature .feature-card__text {
+  margin-top: 38px;
+  line-height: 1.22;
+  max-width: 300px;
+}
+
+.pc-feature--mint {
+  background: #edfbf3;
+  color: #0d7085;
+}
+
+/* Прослеживаемость */
+.trace-section {
+  overflow: hidden;
+}
+
+.trace {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 78px;
+  align-items: stretch;
+}
+
+.trace__media {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+.trace__media img {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  object-fit: cover;
+  object-position: 42% 50%;
+}
+
+.trace__body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 163px;
+}
+
+.trace__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1;
+  color: #2c2c2c;
+}
+
+.trace__text {
+  margin-top: 28px;
+  max-width: 558px;
+  font-size: 24px;
+  line-height: 1.14;
+  color: #2c2c2c;
+}
+
+.trace__progress {
+  position: relative;
+  margin-top: auto;
+  height: 96px;
+  min-height: 96px;
+}
+
+.trace__progress::before {
+  content: '';
+  position: absolute;
+  left: 48px;
+  top: 50%;
+  width: 100vw;
+  height: 2px;
+  background: #cccccc;
+}
+
+.trace__leaf {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--color-teal);
+}
+
+.trace__dot {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-cyan-light);
+  border: 2px solid var(--color-teal);
+}
+
+/* Наука ежедневного ухода */
+.science__lead {
+  max-width: 1038px;
+  margin: 28px auto 42px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.13;
+  color: #2c2c2c;
+}
+
+.video-banner--pc .video-banner__cover {
+  aspect-ratio: 1176 / 660;
+}
+
+.video-banner--pc .video-banner__bar {
+  height: 18.94%;
+  min-height: 64px;
+  background: var(--color-teal);
+}
+
+.video-banner--pc .video-banner__play {
+  font-size: 22px;
+}
+
+.video-banner--pc .video-banner__play-circle {
+  color: var(--color-teal);
+}
+
+.pc-banner__step {
+  position: absolute;
+  left: 11.8%;
+  top: 43.3%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pc-banner__step-num {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(26px, 5.37vw, 77px);
+  line-height: 1;
+  color: #5f6067;
+}
+
+.pc-banner__step-name {
+  margin-left: 0.35em;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(18px, 3.6vw, 52px);
+  line-height: 1;
+  color: #fefefe;
+}
+
+.pc-banner__list {
+  position: absolute;
+  left: 3.6%;
+  top: 67.3%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.pc-banner__item {
+  display: flex;
+  align-items: center;
+  gap: 0.55em;
+  font-family: var(--font-heading);
+  font-size: clamp(11px, 1.78vw, 25.6px);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.pc-banner__item::before {
+  content: '';
+  width: 0.22em;
+  height: 0.22em;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.pc-banner__item--dark {
+  color: #5f6067;
+}
+
+.pc-banner__item--light {
+  color: #fefefe;
+}
+
+/* Для любых потребностей */
+.needs__title {
+  margin-bottom: 42px;
+}
+
+.needs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.needs-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  background: #edfbf9;
+  overflow: hidden;
+  transition: transform var(--duration), box-shadow var(--duration);
+}
+
+.needs-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.needs-card__img {
+  width: 100%;
+  height: 354px;
+  object-fit: cover;
+}
+
+.needs-card__title {
+  padding: 40px 31px 40px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.07;
+  color: #0b7182;
+}
+
+/* Ряд маленьких плиток */
+.pc-tiles-scroll {
+  margin-top: 68px;
+  overflow-x: auto;
+}
+
+.pc-tiles {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.pc-tile {
+  position: relative;
+  flex-shrink: 0;
+  width: 222px;
+  height: 312px;
+  border-radius: var(--radius-card);
+  background: #f3faff;
+  overflow: hidden;
+  transition: transform var(--duration), box-shadow var(--duration);
+}
+
+.pc-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.pc-tile__title {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+.pc-tile__img {
+  position: absolute;
+}
+
+/* Хотспоты в ванной */
+.hotspot--pc .hotspot__caption {
+  margin-top: 42px;
+  grid-template-columns: minmax(280px, 496px) 1fr;
+  gap: 62px;
+}
+
+.hotspot--pc .hotspot__title {
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+.hotspot--pc .hotspot__text {
+  max-width: 616px;
+  font-size: 22px;
+  line-height: 1.18;
+}
+
+.pc-point.hotspot__point {
+  color: var(--color-white);
+}
+
+.pc-point.hotspot__point::before,
+.pc-point.hotspot__point::after {
+  background: currentColor;
+}
+
+.pc-point--green.hotspot__point {
+  background: var(--color-green-light);
+  color: var(--color-green);
+}
+
+.pc-point--teal.hotspot__point {
+  background: #edfbf9;
+  color: #0b7182;
+}
+
+.pc-point--blue.hotspot__point {
+  background: var(--color-cyan-light);
+  color: var(--color-primary);
+}
+
+.pc-point.hotspot__point:hover {
+  background: var(--color-white);
+  transform: scale(1.08);
+}
+
+/* Соберите свой ритуал */
+.ritual-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.ritual-tile {
+  position: relative;
+  height: 250px;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  transition: transform var(--duration), box-shadow var(--duration);
+}
+
+.ritual-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.ritual-tile--green {
+  background: var(--color-green-light);
+  color: var(--color-green);
+}
+
+.ritual-tile--orange {
+  background: var(--color-orange-light);
+  color: #d48b15;
+}
+
+.ritual-tile--sky {
+  background: var(--color-cyan-light);
+  color: var(--color-teal);
+}
+
+.ritual-tile__img {
+  position: absolute;
+  top: 41px;
+  right: 28px;
+}
+
+.ritual-tile--orange .ritual-tile__img {
+  top: 19px;
+  right: 22px;
+}
+
+.ritual-tile--sky .ritual-tile__img {
+  top: 8px;
+  right: 29px;
+}
+
+.ritual-tile__label {
+  position: absolute;
+  left: 24px;
+  bottom: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.ritual-tile__label--upper {
+  text-transform: uppercase;
+}
+
+/* ============ Адаптив ============ */
+@media (max-width: 1279px) {
+  .pc-tiles {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero__title--pc {
+    margin-top: 80px;
+    font-size: 36px;
+    max-width: 480px;
+  }
+
+  .hero--pc .hero__cta {
+    margin-top: 28px;
+  }
+
+  .pc-features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .pc-feature {
+    padding-top: 28px;
+  }
+
+  .pc-feature .feature-card__title {
+    font-size: 23px;
+  }
+
+  .pc-feature .feature-card__text {
+    margin-top: 18px;
+    font-size: 18px;
+  }
+
+  .trace {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 36px;
+  }
+
+  .trace__body {
+    padding-top: 24px;
+  }
+
+  .trace__title {
+    font-size: 30px;
+  }
+
+  .trace__text {
+    margin-top: 16px;
+    font-size: 19px;
+  }
+
+  .trace__media img {
+    min-height: 380px;
+  }
+
+  .trace__progress {
+    margin-top: 32px;
+    height: 72px;
+    min-height: 72px;
+  }
+
+  .trace__leaf {
+    width: 72px;
+    height: 72px;
+  }
+
+  .trace__leaf svg {
+    width: 32px;
+    height: 38px;
+  }
+
+  .trace__progress::before {
+    left: 36px;
+  }
+
+  .trace__dot {
+    width: 26px;
+    height: 26px;
+  }
+
+  .trace__dot:nth-of-type(2) {
+    left: 200px !important;
+  }
+
+  .trace__dot:nth-of-type(3) {
+    left: 390px !important;
+  }
+
+  .trace__dot:nth-of-type(4) {
+    left: 580px !important;
+  }
+
+  .science__lead {
+    font-size: 19px;
+    margin: 18px auto 28px;
+  }
+
+  .needs__title {
+    margin-bottom: 28px;
+  }
+
+  .needs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .needs-card__img {
+    height: 300px;
+  }
+
+  .needs-card__title {
+    padding: 28px 24px;
+    font-size: 24px;
+  }
+
+  .pc-tiles-scroll {
+    margin-top: 32px;
+  }
+
+  .hotspot--pc .hotspot__caption {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 28px;
+  }
+
+  .hotspot--pc .hotspot__title {
+    font-size: 30px;
+  }
+
+  .hotspot--pc .hotspot__text {
+    font-size: 18px;
+  }
+
+  .ritual-grid {
+    gap: 14px;
+  }
+
+  .ritual-tile {
+    height: 200px;
+  }
+
+  .ritual-tile__img {
+    transform: scale(0.8);
+    transform-origin: top right;
+  }
+
+  .ritual-tile__label {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero__title--pc {
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 1;
+    max-width: 320px;
+  }
+
+  .hero--pc .hero__cta {
+    margin-top: 22px;
+  }
+
+  .pc-features {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pc-feature {
+    padding: 24px 20px;
+  }
+
+  .pc-feature .feature-card__title {
+    font-size: 22px;
+    line-height: 1.18;
+  }
+
+  .pc-feature .feature-card__text {
+    margin-top: 16px;
+    font-size: 15px;
+    line-height: 1.2;
+  }
+
+  .trace {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .trace__media img {
+    min-height: 0;
+    aspect-ratio: 358 / 260;
+  }
+
+  .trace__body {
+    padding-top: 0;
+  }
+
+  .trace__title {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
+  .trace__text {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.33;
+  }
+
+  .trace__progress {
+    margin-top: 24px;
+    height: 56px;
+    min-height: 56px;
+  }
+
+  .trace__leaf {
+    width: 56px;
+    height: 56px;
+  }
+
+  .trace__leaf svg {
+    width: 26px;
+    height: 30px;
+  }
+
+  .trace__progress::before {
+    left: 28px;
+  }
+
+  .trace__dot {
+    width: 20px;
+    height: 20px;
+  }
+
+  .trace__dot:nth-of-type(2) {
+    left: 140px !important;
+  }
+
+  .trace__dot:nth-of-type(3) {
+    left: 250px !important;
+  }
+
+  .trace__dot:nth-of-type(4) {
+    left: 340px !important;
+  }
+
+  .science__lead {
+    font-size: 14px;
+    line-height: 1.3;
+    text-align: left;
+    margin: 12px 0 16px;
+  }
+
+  .video-banner--pc .video-banner__bar {
+    min-height: 48px;
+  }
+
+  .video-banner--pc .video-banner__play {
+    font-size: 15px;
+    gap: 12px;
+  }
+
+  .video-banner--pc .video-banner__play-circle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .video-banner--pc .video-banner__play-circle svg {
+    width: 13px;
+    height: 14px;
+  }
+
+  .needs__title {
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  .needs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .needs-card {
+    border-radius: var(--radius-card-sm);
+  }
+
+  .needs-card__img {
+    height: 160px;
+  }
+
+  .needs-card__title {
+    padding: 14px 14px 16px;
+    font-size: 16px;
+    line-height: 1.15;
+  }
+
+  .pc-tiles-scroll {
+    margin-top: 20px;
+    padding-bottom: 6px;
+  }
+
+  .pc-tiles {
+    gap: 12px;
+  }
+
+  .ritual__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .ritual__head .link-arrow {
+    padding: 6px 0;
+    font-size: 16px;
+  }
+
+  .ritual-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ritual-tile {
+    height: 170px;
+    border-radius: var(--radius-card-sm);
+  }
+
+  .ritual-tile__img {
+    transform: scale(0.65);
+  }
+
+  .ritual-tile__label {
+    left: 16px;
+    bottom: 16px;
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .ritual-tile__label svg {
+    width: 6px;
+    height: 11px;
+  }
+}

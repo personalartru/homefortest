@@ -1,0 +1,135 @@
+/* ============ Amway Home (обновлённый макет): история бренда, хотспоты ============ */
+
+/* --- История бренда: слайды вместо отдельных изображений --- */
+.story {
+  display: block;
+  position: relative;
+  padding-bottom: 56px;
+}
+
+.story__slides {
+  position: relative;
+}
+
+.story__slide {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 78px;
+  align-items: stretch;
+}
+
+.story__slide:not(.is-active) {
+  display: none;
+}
+
+.story__media {
+  min-height: 0;
+  aspect-ratio: 500 / 591;
+}
+
+.story__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.story__nav {
+  position: absolute;
+  left: 578px;
+  bottom: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.story__dots {
+  display: none;
+  justify-content: center;
+  margin-top: 16px;
+  color: var(--color-primary);
+}
+
+/* --- Хотспоты: тултипы --- */
+.hotspot__tooltip {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 17px 24px;
+  border-radius: 28px;
+  background: rgba(5, 5, 5, 0.92);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.2;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--duration), visibility var(--duration);
+}
+
+.hotspot__point--tip-left .hotspot__tooltip {
+  right: 100%;
+  margin-right: 14px;
+}
+
+.hotspot__point--tip-right .hotspot__tooltip {
+  left: 100%;
+  margin-left: 14px;
+}
+
+.hotspot__point:hover .hotspot__tooltip,
+.hotspot__point.is-active .hotspot__tooltip,
+.hotspot__point:focus-visible .hotspot__tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ============ Адаптив ============ */
+@media (max-width: 1023px) {
+  .story__slide {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 36px;
+  }
+
+  .story__media {
+    aspect-ratio: 500 / 591;
+  }
+
+  .story__nav {
+    left: calc(45.45% + 19.6px);
+  }
+}
+
+@media (max-width: 767px) {
+  .story {
+    padding-bottom: 0;
+  }
+
+  .story__slide {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .story__media {
+    aspect-ratio: 1 / 1;
+  }
+
+  .story__nav {
+    position: static;
+    display: none;
+  }
+
+  .story__dots {
+    display: flex;
+  }
+
+  .hotspot__tooltip {
+    display: none;
+  }
+}
