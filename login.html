@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход — Amway Home</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    .login {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: var(--color-cyan-light);
+    }
+    .login__card {
+      width: 100%;
+      max-width: 400px;
+      padding: 40px 32px;
+      background: var(--color-white);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-card);
+      text-align: center;
+    }
+    .login__logo {
+      display: block;
+      margin: 0 auto 24px;
+    }
+    .login__title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.2;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+    }
+    .login__hint {
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--color-text-soft);
+      margin-bottom: 28px;
+    }
+    .login__field {
+      display: block;
+      text-align: left;
+      margin-bottom: 16px;
+    }
+    .login__label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 6px;
+    }
+    .login__input {
+      display: block;
+      width: 100%;
+      padding: 11px 14px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--color-text);
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-20);
+      border-radius: 8px;
+      outline: none;
+      transition: border-color var(--duration);
+      box-sizing: border-box;
+    }
+    .login__input:focus {
+      border-color: var(--color-primary);
+    }
+    .login__error {
+      font-size: 13px;
+      color: var(--color-red);
+      text-align: left;
+      margin: -4px 0 16px;
+    }
+    .login__submit {
+      width: 100%;
+      margin-top: 4px;
+    }
+    @media (max-width: 767px) {
+      .login__card {
+        padding: 32px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="login">
+    <form class="login__card" id="login-form" novalidate>
+      <img class="login__logo" src="assets/icons/amway-logo-color.svg" alt="Amway" width="150" height="52">
+      <h1 class="login__title">Вход</h1>
+      <p class="login__hint">Введите логин и пароль, чтобы открыть страницу</p>
+      <label class="login__field" for="login-user">
+        <span class="login__label">Логин</span>
+        <input class="login__input" id="login-user" type="text" name="user" autocomplete="username" required>
+      </label>
+      <label class="login__field" for="login-pass">
+        <span class="login__label">Пароль</span>
+        <input class="login__input" id="login-pass" type="password" name="pass" autocomplete="current-password" required>
+      </label>
+      <p class="login__error" id="login-error" role="alert" hidden>Неверный логин или пароль</p>
+      <button class="btn login__submit" type="submit">Войти</button>
+    </form>
+  </main>
+
+  <script>
+    var AUTH_KEY = 'amway_home_auth';
+    var USER = 'amway';
+    var PASS_HASH = '398a3b00718b4c63d5540684974ae0e7c1b1bba3f6e85091977f4c5de8bb17e2';
+
+    if (new URLSearchParams(location.search).has('logout')) {
+      sessionStorage.removeItem(AUTH_KEY);
+    }
+
+    function sha256(str) {
+      var data = new TextEncoder().encode(str);
+      return crypto.subtle.digest('SHA-256', data).then(function (buf) {
+        return Array.prototype.map.call(new Uint8Array(buf), function (b) {
+          return ('00' + b.toString(16)).slice(-2);
+        }).join('');
+      });
+    }
+
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var user = document.getElementById('login-user').value.trim();
+      var pass = document.getElementById('login-pass').value;
+      if (!user || !pass) {
+        document.getElementById('login-error').hidden = false;
+        return;
+      }
+      sha256(user + ':' + pass).then(function (hash) {
+        if (user === USER && hash === PASS_HASH) {
+          sessionStorage.setItem(AUTH_KEY, '1');
+          location.replace('index.html');
+        } else {
+          document.getElementById('login-error').hidden = false;
+          document.getElementById('login-pass').value = '';
+          document.getElementById('login-pass').focus();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

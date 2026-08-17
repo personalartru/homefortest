@@ -4,12 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amway Home — Дом, не просто место для жизни</title>
+  <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="Amway Home: экологичные средства для дома, системы очистки воды и воздуха, посуда и техника для кухни.">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/home-v2.css">
+  <script>
+    if (sessionStorage.getItem('amway_home_auth') !== '1') {
+      location.replace('login.html');
+    }
+  </script>
 </head>
 <body>
   <header class="header">
@@ -18,7 +24,7 @@
         <button class="header__mobile-toggle" type="button" data-mobile-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню">
           <span></span>
         </button>
-        <a class="header__logo" href="home.html" aria-label="Amway — на главную">
+        <a class="header__logo" href="index.html" aria-label="Amway — на главную">
           <img src="assets/icons/amway-logo-white.svg" alt="Amway" width="125" height="43">
         </a>
         <form class="header__search" data-search-form role="search">
@@ -81,7 +87,7 @@
               Наши бренды
             </button>
             <div class="header__dropdown" id="brands-menu">
-              <a class="header__dropdown-link" href="home.html" aria-current="page">Amway Home™</a>
+              <a class="header__dropdown-link" href="index.html" aria-current="page">Amway Home™</a>
               <a class="header__dropdown-link" href="artistry.html">Artistry™</a>
               <a class="header__dropdown-link" href="personal-care.html">Personal Care</a>
               <a class="header__dropdown-link" href="nutrilite.html">Nutrilite™</a>
@@ -114,7 +120,7 @@
         </ul>
         <div class="mobile-menu__sub">
           <p class="mobile-menu__sub-title">Наши бренды</p>
-          <a class="mobile-menu__sub-link" href="home.html" aria-current="page">Amway Home™</a>
+          <a class="mobile-menu__sub-link" href="index.html" aria-current="page">Amway Home™</a>
           <a class="mobile-menu__sub-link" href="artistry.html">Artistry™</a>
           <a class="mobile-menu__sub-link" href="personal-care.html">Personal Care</a>
           <a class="mobile-menu__sub-link" href="nutrilite.html">Nutrilite™</a>
@@ -625,7 +631,7 @@
             <ul class="footer__list">
               <li><a class="footer__link" href="nutrilite.html">NUTRILITE™</a></li>
               <li><a class="footer__link" href="artistry.html">Artistry™</a></li>
-              <li><a class="footer__link" href="home.html">Amway Home™</a></li>
+              <li><a class="footer__link" href="index.html">Amway Home™</a></li>
               <li><a class="footer__link" href="personal-care.html">Personal Care</a></li>
               <li><a class="footer__link footer__link--bold" href="#">Подробнее</a></li>
             </ul>
@@ -689,6 +695,7 @@
         <img src="assets/icons/amway-logo-color.svg" alt="Amway" width="70" height="24" loading="lazy">
         <p class="footer__copy">© 2011-2020 Amway Europe. Все права защищены.</p>
         <a class="footer__site-link" href="http://www.amwayglobal.com" target="_blank" rel="noopener">http://www.amwayglobal.com</a>
+        <a class="footer__site-link" href="login.html?logout=1">Выйти</a>
       </div>
     </div>
   </footer>
